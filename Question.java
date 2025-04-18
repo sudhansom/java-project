@@ -17,7 +17,11 @@ public class Question{
      this.answer = answer;
     }
 
+    public String getAnswer(){
+        return this.answer;
+    }
+
     public String toString(){
-        return "Question " + this.question +  "\n" + this.opt1 + "   " + this.opt2 + "  " + this.opt3 + "  " + this.opt4;
+        return "Question " + this.question +  "?\n" +  "\t" +"a. " + this.opt1 + " b.  " + this.opt2 + "c.  " + this.opt3 + "d.  " + this.opt4;
     }
 }

@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class QuestionService {
     Question[] question = new Question[5];
 
@@ -10,8 +12,20 @@ public class QuestionService {
     }
 
     public void playQuiz(){
+        int i = 0;
+        int result = 0;
         for(Question question : question){
-            System.out.println(question);
+            System.out.println(++i + ". " + question);
+            Scanner sc = new Scanner(System.in);
+            String ans = sc.nextLine();
+            if(ans.equals( question.getAnswer())){
+
+                System.out.println(ans + " you are right");
+            }else {
+                System.out.println(ans + question.getAnswer() + " you are Wrong...");
+            }
+            result ++;
         }
+        System.out.println(result + " Right answer.");
     }
 }
