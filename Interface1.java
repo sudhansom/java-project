@@ -4,6 +4,12 @@ class Laptop {
     }
 }
 
+class Desktop {
+    public void code() {
+        System.out.println("code, run, faster.....");
+    }
+}
+
 
 class Developer {
     public void code(Laptop lap){
@@ -16,6 +22,7 @@ public class Interface1 {
     public static void main(String[] args){
         Developer dev = new Developer();
         Laptop lap = new Laptop();
-        dev.code(lap);
+        Desktop des = new Desktop();
+        dev.code(des);
     }
 }
