@@ -3,7 +3,7 @@ public class Question{
     private String question;
     private String opt1;
     private String opt2;
-    private String otp3;
+    private String opt3;
     private String opt4;
     private String answer;
 
@@ -11,10 +11,13 @@ public class Question{
      this.id = id;
      this.question = question;
      this.opt1 = opt1;
-     this.opt1 = opt1;
-     this.opt1 = opt1;
-     this.opt1 = opt1;
+     this.opt2 = opt2;
+     this.opt3 = opt3;
+     this.opt4 = opt4;
      this.answer = answer;
+    }
 
+    public String toString(){
+        return "Question " + this.question +  "\n" + this.opt1 + "   " + this.opt2 + "  " + this.opt3 + "  " + this.opt4;
     }
 }
