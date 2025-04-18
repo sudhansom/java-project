@@ -26,8 +26,8 @@ class Developer {
 public class Interface1 {
     public static void main(String[] args){
         Developer dev = new Developer();
-        Computer lap = new Laptop();
-        // Computer des = new Desktop();
-        dev.code(lap);
+        // Computer lap = new Laptop();
+        Computer des = new Desktop();
+        dev.code(des);
     }
 }
