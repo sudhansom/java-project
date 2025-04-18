@@ -1,11 +1,13 @@
-class Laptop {
-    public void code(){
-        System.out.println("Code, run, debug....");
-    }
+interface Laptop {
+    void code();
 }
 
-class Desktop {
-    public void code() {
+interface Desktop {
+    void code();
+}
+
+class Computer implements  Laptop, Desktop {
+    public void code(){
         System.out.println("code, run, faster.....");
     }
 }
@@ -21,8 +23,7 @@ class Developer {
 public class Interface1 {
     public static void main(String[] args){
         Developer dev = new Developer();
-        Laptop lap = new Laptop();
-        Desktop des = new Desktop();
-        dev.code(des);
+        Computer comp = new Computer();
+        dev.code(comp);
     }
 }
