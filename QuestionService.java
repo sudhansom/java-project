@@ -14,10 +14,20 @@ public class QuestionService {
     public void playQuiz(){
         int i = 0;
         int result = 0;
+        String ans;
+        boolean opt = true;
         for(Question question : question){
-            System.out.println(++i + ". " + question);
-            Scanner sc = new Scanner(System.in);
-            String ans = sc.nextLine();
+            do{
+                if(!opt){
+                    System.out.println("Please choose from the option only.");
+                }
+
+                System.out.println(i + ". " + question);
+                Scanner sc = new Scanner(System.in);
+                ans = sc.nextLine();
+                opt = ans.equals(question.getOpt1()) || ans.equals(question.getOpt2()) || ans.equals(question.getOpt3()) || ans.equals(question.getOpt4());
+                System.out.println(opt);
+            }while(!opt);
             if(ans.equals( question.getAnswer())){
 
                 System.out.println(ans + " you are right");

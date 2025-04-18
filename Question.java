@@ -21,6 +21,22 @@ public class Question{
         return this.answer;
     }
 
+    public String getOpt1(){
+        return this.opt1;
+    }
+
+    public String getOpt2(){
+        return this.opt2;
+    }
+
+    public String getOpt3(){
+        return this.opt3;
+    }
+
+    public String getOpt4(){
+        return this.opt4;
+    }
+
     public String toString(){
         return "Question " + this.question +  "?\n" +  "\t" +"a. " + this.opt1 + " b.  " + this.opt2 + "c.  " + this.opt3 + "d.  " + this.opt4;
     }
