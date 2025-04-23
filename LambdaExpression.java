@@ -4,7 +4,7 @@ interface A {
 }
 
 public class LambdaExpression {
-   public static void main(String[] asrs){
+   public static void main(String[] args){
     A obj = () -> System.out.println("I am in A");
        obj.show();
    }
